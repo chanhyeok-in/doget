@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-  /* 귀여운 느낌의 Gaegu 폰트로 변경 */
   font-family: 'Gaegu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,10 +22,8 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  /* 부드러운 크림색 배경 */
   background: rgba(255, 249, 242, 0.95);
   padding: 40px;
-  /* 모서리를 더 둥글게 */
   border-radius: 24px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -47,6 +44,12 @@ p {
   font-size: 1.2em;
 }
 
+.error-message {
+  color: #d93025;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
 .form-group {
   margin-bottom: 20px;
   text-align: left;
@@ -64,7 +67,6 @@ p {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
-  /* 모서리를 더 둥글게 */
   border-radius: 12px;
   box-sizing: border-box;
   font-family: 'Gaegu', sans-serif;
@@ -75,11 +77,9 @@ p {
 button {
   width: 100%;
   padding: 15px;
-  /* 부드러운 핑크색 버튼 */
   background-color: #ff8fab;
   color: white;
   border: none;
-  /* 모서리를 더 둥글게 */
   border-radius: 12px;
   font-size: 1.4em;
   cursor: pointer;
@@ -88,11 +88,15 @@ button {
   font-weight: 700;
 }
 
-button:hover {
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
   background-color: #ff7096;
 }
 
-/* ARButton 기본 스타일 수정 */
 .ar-button {
     position: absolute;
     bottom: 30px;

@@ -1,38 +1,111 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  /* 귀여운 느낌의 Gaegu 폰트로 변경 */
+  font-family: 'Gaegu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container.on-top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  /* 부드러운 크림색 배경 */
+  background: rgba(255, 249, 242, 0.95);
+  padding: 40px;
+  /* 모서리를 더 둥글게 */
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
+  max-width: 400px;
+  width: 90%;
+  border: 2px solid white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-top: 0;
+  color: #4a4a4a;
+  font-size: 2.2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.2em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  /* 모서리를 더 둥글게 */
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-family: 'Gaegu', sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  /* 부드러운 핑크색 버튼 */
+  background-color: #ff8fab;
   color: white;
+  border: none;
+  /* 모서리를 더 둥글게 */
+  border-radius: 12px;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Gaegu', sans-serif;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #ff7096;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ARButton 기본 스타일 수정 */
+.ar-button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 10;
+    font-family: 'Gaegu', sans-serif;
+    font-weight: 700;
 }
